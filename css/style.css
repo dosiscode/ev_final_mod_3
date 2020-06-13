@@ -1,3 +1,48 @@
+/*Indice
+1. Etiquetas
+2. Responsive
+3. Colores
+4. Margin
+5. Utilidades
+6. Personalizados
+*/
+
+/*1. Etiquetas*/
+h1 {
+    font-family: 'Bad Script', cursive;
+}
+
+h2 {
+    font-family: 'Bad Script', cursive;
+}
+
+h3 {
+    font-family: 'Bad Script', cursive;
+}
+
+h4 {
+    font-family: 'Bad Script', cursive;
+}
+
+h5 {
+    font-family: 'Bad Script', cursive;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+}
+
+nav {
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav h1 {
+    margin: 0px;
+    padding: 0px;
+}
+
 /*Responsive*/
 * {
     box-sizing: border-box;
@@ -14,14 +59,28 @@
     padding: 15px;
 }
 
-/* For mobile phones: */
+/* Celulares: */
 [class*="col-"] {
     width: 100%;
 }
 
+@media only screen and (max-width: 599px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav .nav-logo {
+        margin-left: auto;
+    }
+
+    .nav-link {
+        margin: 5px 0;
+    }
+}
+
 @media only screen and (min-width: 600px) {
 
-    /* For tablets: */
+    /* Tablets: */
     .col-s-1 {
         width: 8.33%;
     }
@@ -73,7 +132,7 @@
 
 @media only screen and (min-width: 768px) {
 
-    /* For desktop: */
+    /* PC+: */
     .col-1 {
         width: 8.33%;
     }
@@ -123,27 +182,7 @@
     }
 }
 
-h1 {
-    font-family: 'Bad Script', cursive;
-}
-h2 {
-    font-family: 'Bad Script', cursive;
-}
-h3 {
-    font-family: 'Bad Script', cursive;
-}
-h4 {
-    font-family: 'Bad Script', cursive;
-}
-h5 {
-    font-family: 'Bad Script', cursive;
-}
-
-p {
-    font-family: 'Raleway', sans-serif;
-}
-
-/*Paleta colores*/
+/*Colores*/
 .bg-light {
     background-color: #EEEEEE;
 }
@@ -155,4 +194,84 @@ p {
 .bg-lightblue {
     /*Para hover boton del nav*/
     background-color: #AAC2E5;
+}
+
+.text-indigo {
+    color: indigo;
+}
+
+.text-light {
+    color: #EEEEEE;
+}
+
+.text-lightblue {
+    color: #AAC2E5;
+}
+
+.text-azul {
+    color: #667EAF;
+}
+
+/*Utilidades*/
+.text-center {
+    text-align: center;
+}
+
+.centrar {
+    /*centrado horizontal*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mr {
+    margin-right: 15px;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.push-left {
+    margin-right: auto;
+}
+
+/*Personalizados*/
+.nav-link {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    padding: 10px 30px;
+}
+
+.nav-link:hover {
+    background-color: #64B0BD;
+    color: white;
+}
+
+.nav-logo {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-family: 'Bad Script', cursive;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 2px 30px;
+}
+.nav-logo:hover {
+    color: #64B0BD;
+}
+
+.footer {
+    background-color: #667EAF;
+    color: #ffffff;
+    text-align: center;
+    font-size: 15px;
+    padding: 15px;
 }
