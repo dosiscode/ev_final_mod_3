@@ -563,7 +563,7 @@ TODO: more distinction between this file and common.css
 .fc-unthemed .fc-popover,
 .fc-unthemed .fc-list-view,
 .fc-unthemed .fc-list-heading td {
-  border-color: #ddd;
+  border-color: rgb(230, 245, 146);
 }
 
 .fc-unthemed .fc-popover {
@@ -577,7 +577,7 @@ TODO: more distinction between this file and common.css
 }
 
 .fc-unthemed td.fc-today {
-  background: #fcf8e3;
+  background: #8edf82c4;
 }
 
 .fc-unthemed .fc-disabled-day {
@@ -714,14 +714,14 @@ Lots taken from Flatly (MIT): https://bootswatch.com/4/flatly/bootstrap.css
 /* "primary" coloring */
 .fc-button-primary {
   color: #fff;
-  background-color: #2C3E50;
-  border-color: #2C3E50;
+  background-color: #667EAF;
+  border-color: #667EAF;
 }
 
 .fc-button-primary:hover {
   color: #fff;
-  background-color: #1e2b37;
-  border-color: #1a252f;
+  background-color: #AAC2E5;
+  border-color: #AAC2E5;
 }
 
 .fc-button-primary:focus {
@@ -1049,4 +1049,10 @@ Lots taken from Flatly (MIT): https://bootswatch.com/4/flatly/bootstrap.css
     display: none;
     /* don't display any button-related controls */
   }
+}
+
+/* ajustes de fer
+----------------------------------------------------------------------------------------------------*/
+#calendar{
+  margin-top: 2%;
 }
