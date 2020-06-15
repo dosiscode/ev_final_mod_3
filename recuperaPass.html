@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Planiapp - Restablecer Contraseña</title>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Raleway&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/pass.css">
+        <link rel="stylesheet" href="css/jquery-ui.css">
+    </head>
+<style>
+</style>
+<body>
+    <div class="row">
+        <nav class="col-12 bg-azul">
+            <td><img src="imagen/logoplaniapp.png" width="70" height="50" onclick="location.href='index.html'"></td><a href="" class="nav-logo push-left">Planiapp</a>
+            <a href="" class="nav-link bg-lightblue">Inicio</a>
+            <a href="" class="nav-link bg-lightblue">Quienes Somos</a>
+            <a href="" class="nav-link bg-lightblue">Contacto</a>
+            <a href="" class="nav-link bg-lightblue" onclick="location.href='LOGGIN.html'">Login</a>
+        </nav>
+    </div>
+    <div class="acceso">
+    <table class="recupera">
+        <tr>
+            <td><h1>Recupera tu contraseña</h1></td>
+        </tr>
+        <tr>
+            <td>Ingresa tu mail</td> 
+            <td><input class="text" id="mail" name="mail"></td>
+        </tr>
+        <tr>
+        <td></td>
+        <td><br/>
+            <button data-modal-target="#modal" input class="botonIngresar">Restablecer contraseña</button>
+            <div class="modal" id="modal">
+              <div class="modal-header">
+                <div class="title">Nueva Contraseña</div>
+                <button data-close-button class="close-button">&times;</button>
+              </div>
+              <div class="modal-body">
+
+                Hemos enviado un link a tu mail!
+                
+              </div>
+            </div>
+            <div id="overlay"></div>
+        </td>
+        </tr>
+    </table>
+
+</div>
+<script>
+const openModalButtons = document.querySelectorAll('[data-modal-target]')
+const closeModalButtons = document.querySelectorAll('[data-close-button]')
+const overlay = document.getElementById('overlay')
+
+openModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = document.querySelector(button.dataset.modalTarget)
+    openModal(modal)
+  })
+})
+
+overlay.addEventListener('click', () => {
+  const modals = document.querySelectorAll('.modal.active')
+  modals.forEach(modal => {
+    closeModal(modal)
+  })
+})
+
+closeModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('.modal')
+    closeModal(modal)
+  })
+})
+
+
+function openModal(modal) {
+var mailTxt = document.getElementById("mail").value;
+
+ if (mailTxt.length == 0 )
+    {
+     alert('Para restablecer tu contraseña, debes ingresar tu mail.');
+     return false;
+}
+
+  if (modal == null) return
+  modal.classList.add('active')
+  overlay.classList.add('active')
+    
+}
+    function closeModal(modal) {
+    if (modal == null) return
+    modal.classList.remove('active')
+    overlay.classList.remove('active')
+
+ }
+ (function() {
+    var updateButton = document.getElementById('restablecerPass');
+    var OKButton = document.getElementById('OK');
+
+    updateButton.addEventListener('click', function() {
+      favDialog.showModal();
+    });
+
+    OKButton.addEventListener('click', function() {
+      favDialog.close();
+    });
+
+
+  })();
+</script>
+
+<div class="footer bg-azul">
+    <table class="foot">
+        <div>
+            <div class="col1foot">
+            <p>Contactanos: </p> 
+            <p>&#x260e;  +569 78346700 </p>
+            <p>&#x2709;  contacto@planiapp.cl</p>
+            </div>
+            <tr>
+            <div id="copyright">Todos los derechos reservados - Página creada por Planiapp - Copyright&copy; 2020</div>
+        </tr>
+        </div>
+    </table>
+</div>
+</body>
+</html>
