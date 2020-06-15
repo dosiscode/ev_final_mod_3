@@ -13,11 +13,14 @@ document.addEventListener('DOMContentLoaded', function() {
           text: 'Agregar nota',
           //aqui va la accion del click
           click: function() {
+            //window.open("nota.html","ventana1","scrollbars=NO")
+            var url="nota.html";
+            window.open(url);
             
           }
         }
       },
-      //que botones y texto va a tener la cabecera del calendario
+      //botones y texto va a tener la cabecera del calendario
       header: {
           left: 'prev,next today',
           center: 'title',
@@ -32,12 +35,29 @@ document.addEventListener('DOMContentLoaded', function() {
             //de que dia es la etiqueta, puede tener un end, y asi alargarla los dias que queramos
             start: '2020-06-01', 
             //color de fondo, tambien con color le cambiamos el color de letra
-            backgroundColor: '#667EAF'
+            backgroundColor: '#667EAF',
+            //poner la url del archivo que muestre la nota completa
+            url: 'nota.html'
 
           }
-      ]
+      ],
+
+      eventClick: function(event) {
+        condole.log(event.url);
+        if (event.url) {
+          $.fancybox({
+            "type": "iframe",
+            "href": "event.url"
+          })
+          return false;
+          
+        }
+      }
       
     });
 
     calendar.render();
   });
+
+
+

@@ -4,22 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planiapp</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="css/fullcalendar.css" rel="stylesheet" />
-    <link href="css/daygrid.css" rel="stylesheet" />
-
     <script src="js/jquery.js"></script>
-    
-    <script src="js/fullcalendar.js"></script>
-    <script src="js/daygrid.js"></script>
-    <script src="js/es.js"></script>
-    <script src="js/interaction.js"></script>
-    <script src="js/functionCalendar.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-
-    
-
+    <link rel="stylesheet" href="css/nota.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="row">
@@ -32,9 +19,41 @@
             <a href="" class="nav-logo push-left">Planiapp</a>
         </nav>
     </div>
-
-    <div id="calendar"></div>
-
+    
+    <div>
+        <h1 class="titulo">Nueva Nota</h1>
+    </div>
+    
+    <div class="cen letras" id="nota">
+        
+        <table>
+            <tr>
+                <td>Titulo</td>
+            </tr>
+            <tr>
+                <td><input type="text"  id="txtTitulo"></td>
+            </tr>
+            <tr>
+                <td>Fecha</td>
+            </tr>
+            <tr>
+                <td><input type="date" id="txtFecha"></td>
+            </tr>
+            <tr>
+                <td>Nota</td>
+            </tr>
+            <tr>
+                <td>
+                    <textarea  id="txtNota" cols="50" rows="15"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="Agregar" id="btnAddNote">
+                </td>
+            </tr>
+        </table>
+    </div>
     <div class="footer bg-azul mt">
         <table class="foot">
             <div>
@@ -50,6 +69,5 @@
             </div>
         </table>
     </div>
-    
 </body>
 </html>
