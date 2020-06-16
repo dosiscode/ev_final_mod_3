@@ -48,6 +48,10 @@ h1{
     border-style: ridge;
     border-radius:13px;
     }
+.botonIngresar a {
+    text-decoration: none;
+    color: #EEEEEE;
+}
 
 .botonIngresar:hover {
     background-color:#AAC2E5;

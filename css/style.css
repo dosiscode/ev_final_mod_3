@@ -356,6 +356,11 @@ nav h1 {
     transition: all 300ms linear;
 }
 
+.btn-comenzar a {
+    color: #EEEEEE;
+    text-decoration: none;
+}
+
 .btn-comenzar:hover {
     background-color: #FCACD1;
     transition: all 300ms linear;
