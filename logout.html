@@ -5,9 +5,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Raleway&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/pass.css">
+      
+        <link rel="stylesheet" href="css/logoutt.css">
         <script src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/recupass.js"></script>
+      
         <link rel="stylesheet" href="css/jquery-ui.css">
     </head>
 <style>
@@ -15,43 +16,34 @@
 <body>
     <div class="row">
         <nav class="col-12 bg-azul">
-            <td><img src="imagen/logoplaniapp.png" width="70" height="50" onclick="location.href='index.html'"></td><a href="" class="nav-logo push-left">Planiapp</a>
+            <td><img src="imagen/logoplaniapp.png" width="70" height="40" onclick="location.href='index.html'"></td><a href="" class="nav-logo push-left">Planiapp</a>
             <a href="" class="nav-link bg-lightblue">Inicio</a>
             <a href="" class="nav-link bg-lightblue">Quienes Somos</a>
             <a href="" class="nav-link bg-lightblue">Contacto</a>
             <a href="" class="nav-link bg-lightblue" onclick="location.href='LOGGIN.html'">Login</a>
         </nav>
     </div>
-    <div class="acceso">
-    <table class="recupera">
-        <tr>
-            <td><h1>Recupera tu contraseña</h1></td>
-        </tr>
-        <tr>
-            <td>Ingresa tu mail</td> 
-            <td><input class="text" id="mail" name="mail"></td>
-        </tr>
-        <tr>
-        <td></td>
-        <td><br/>
-            <button data-modal-target="#modal" input class="botonIngresar">Restablecer contraseña</button>
-            <div class="modal" id="modal">
-              <div class="modal-header">
-                <div class="title">Nueva Contraseña</div>
-                <button data-close-button class="close-button">&times;</button>
-              </div>
-              <div class="modal-body">
-
-                Hemos enviado un link a tu mail!
-                
-              </div>
-            </div>
-            <div id="overlay"></div>
-        </td>
-        </tr>
-    </table>
-
+    <div class="row">
+        <div class="mensaje">
+            <div class="col-12">
+            <table class="log-out">
+                <tr>
+                    <td>
+                        <h1>Esperamos verte pronto!</h1>
+                        <p>Los cambios realizados han sido guardados.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><br/>
+                        <button data-modal-target="#modal" input class="botonIngresar" onclick="location.href='index.html'">Volver al Inicio</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </div>
+
 <script>
 
 </script>
