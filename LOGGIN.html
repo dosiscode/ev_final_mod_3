@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Planiapp - login</title>
+        <title>Planiapp - Login</title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Raleway&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/login.css">
         <link rel="stylesheet" href="css/jquery-ui.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/loginn.js"></script>
     </head>
 <style>
 </style>    
-<body>
+<body onload="script();">
     <div class="row">
         <nav class="col-12 bg-azul">
-            <td><img src="imagen/logoplaniapp.png" width="70" height="50" onclick="location.href='index.html'"></td><a href="" class="nav-logo push-left">Planiapp</a>
+            <td><img src="img/logoplaniapp.png" width="70" height="40" onclick="location.href='index.html'"></td><a href="" class="nav-logo push-left">Planiapp</a>
             <a href="" class="nav-link bg-lightblue">Inicio</a>
             <a href="" class="nav-link bg-lightblue">Quienes Somos</a>
             <a href="" class="nav-link bg-lightblue">Contacto</a>
@@ -20,155 +24,86 @@
         </nav>
     </div>
     <div class="acceso">
-    <table class="ingreso">
-        <tr>
-            <td><h1>Acceso Usuario</h1></td>
-        </tr>
-        <tr>
-            <td>User:</td> 
-            <td><input class="text"  id="user" name="user"></td>
-        </tr>
-        <tr>
-            <td>Password:</td> 
-            <td><input class="text" id="contrasenia" name="contrasenia"></td>
-        </tr>
-        <tr>
-            
-        <td><input type="button" class="clave" value="Olvidaste tu clave?" onclick="location.href='recuperaPass.html'"></td>
-        
-        <td>
-            <button data-modal-target2="#modal2" input class="botonIngresar">Ingresar</button>
-            <div class="modal2" id="modal2">
-              <div class="modal-header">
-                <div class="title">Ingresar</div>
-              </div>
-            </div>
-        </td>
-        </tr>
-    </table>
-    <table class="registro">    
-        <tr>
-            <td><h1>Registrate Aquí</h1></td>
-        </tr>
-        <tr>
-            <td>Nombre:</td> 
-            <td><input class="text"  id="nombre" name="nombre"></td>
-        </tr>
-        <tr>
-            <td>Apellido:</td> 
-            <td><input class="text" id="apellido" name="apellido" ></td>
-        </tr>
-        <tr>
-            <td>Mail:</td> 
-            <td><input class="text" id="mail" name="mail" ></td>
-        </tr>
-        <tr>
-            <td>Password:</td> 
-            <td><input class="text" id="pass" name="pass"></td>
-        </tr>
-        <tr>
-            <td>Confirmar password:</td> 
-            <td><input class="text" maxlength="10" id="con" name="con"></td>
-        </tr>
-        <tr>
-        <td></td>
-        <td>
-            <button data-modal-target="#modal" input class="botonIngresar">Registrar</button>
-            <div class="modal" id="modal">
-              <div class="modal-header">
-                <div class="title">Usuario Registrado</div>
-                <button data-close-button class="close-button">&times;</button>
-              </div>
-              <div class="modal-body">
-
-                Tus datos han sido registrados exitosamente!
+      <div class="row"> 
+        <div class="col-6">
+          <table class="ingreso">
+            <tr>
+                <td><h1>Acceso Usuario</h1></td>
+            </tr>
+            <tr>
+                <td>User:</td> 
+                <td><input class="text"  id="user" name="user"></td>
+            </tr>
+            <tr>
+                <td>Password:</td> 
+                <td><input class="text" id="contrasenia" name="contrasenia"></td>
+            </tr>
+            <tr>
                 
-              </div>
-            </div>
-            <div id="overlay"></div>
-        </td>        
-        </tr>
-    </table>
+            <td><input type="button" class="clave" value="Olvidaste tu clave?" onclick="location.href='recuperaPass.html'"></td>
+            
+            <td>
+                <button data-modal-target2="#modal2" input class="botonIngresar">Ingresar</button>
+                <div class="modal2" id="modal2">
+                  <div class="modal-header">
+                    <div class="title">Ingresar</div>
+                  </div>
+                </div>
+            </td>
+            </tr>
+        </table>
+        </div>
+        <div class="col-6">
+          <table class="registro">    
+            <tr>
+                <td><h1>Registrate Aquí</h1></td>
+            </tr>
+            <tr>
+                <td>Nombre:</td> 
+                <td><input class="text"  id="nombre" name="nombre"></td>
+            </tr>
+            <tr>
+                <td>Apellido:</td> 
+                <td><input class="text" id="apellido" name="apellido" ></td>
+            </tr>
+            <tr>
+                <td>Mail:</td> 
+                <td><input class="text" id="mail" name="mail" ></td>
+            </tr>
+            <tr>
+                <td>Password:</td> 
+                <td><input class="text" id="pass" name="pass"></td>
+            </tr>
+            <tr>
+                <td>Confirmar password:</td> 
+                <td><input class="text" maxlength="10" id="con" name="con"></td>
+            </tr>
+            <tr>
+            <td></td>
+            <td>
+                <button data-modal-target="#modal" input class="botonIngresar">Registrar</button>
+                <div class="modal" id="modal">
+                  <div class="modal-header">
+                    <div class="title">Usuario Registrado</div>
+                    <button data-close-button class="close-button">&times;</button>
+                  </div>
+                  <div class="modal-body">
+    
+                    Tus datos han sido registrados exitosamente!
+                    
+                  </div>
+                </div>
+                <div id="overlay"></div>
+            </td>        
+            </tr>
+        </table>
+        </div>
+    </div>
+    
+    
 </div>
 <script>
-// validacion registro
-const openModalButtons = document.querySelectorAll('[data-modal-target]')
-const closeModalButtons = document.querySelectorAll('[data-close-button]')
-const overlay = document.getElementById('overlay')
 
-openModalButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const modal = document.querySelector(button.dataset.modalTarget)
-    openModal(modal)
-  })
-})
-
-overlay.addEventListener('click', () => {
-  const modals = document.querySelectorAll('.modal.active')
-  modals.forEach(modal => {
-    closeModal(modal)
-  })
-})
-
-closeModalButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const modal = button.closest('.modal')
-    closeModal(modal)
-  })
-})
-
-
-function openModal(modal) {
-var nombreTxt = document.getElementById("nombre").value;
-var apellidoTxt = document.getElementById("apellido").value;
-var mailTxt = document.getElementById("mail").value;
-var passTxt = document.getElementById("pass").value;
-var conTxt = document.getElementById("con").value;
-
- if (nombreTxt.length == 0 || apellidoTxt.length == 0 || mailTxt.length == 0 || passTxt.length == 0  ||conTxt.length == 0 )
-    {
-     alert('Hay uno o más campos vacios.');
-     return false;
-}
-
-  if (modal == null) return
-  modal.classList.add('active')
-  overlay.classList.add('active')
-    
-}
-    function closeModal(modal) {
-    if (modal == null) return
-    modal.classList.remove('active')
-    overlay.classList.remove('active')
-
- }
-
- //validacion ingreso
- const openModalButtons2 = document.querySelectorAll('[data-modal-target2]')
-const closeModalButtons2 = document.querySelectorAll('[data-close-button2]')
-
-openModalButtons2.forEach(button => {
-  button.addEventListener('click', () => {
-    const modal2 = document.querySelector(button.dataset.modalTarget)
-    openModal2(modal2)
-  })
-})
-
-function openModal2(modal2) {
-var userTxt = document.getElementById("user").value;
-var contraseniaTxt = document.getElementById("contrasenia").value;
-
- if (contraseniaTxt.length == 0 || userTxt.length == 0 )
-    {
-     alert('Debes autenticarte para poder ingresar.');
-     return false;
-}
-
-  if (modal2 == null) return
-  modal2.classList.add('active')
-  overlay2.classList.add('active')
-    
-}
 
 </script>
 
