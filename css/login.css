@@ -4,11 +4,10 @@ h1 {
 }
 
 .acceso{
-    margin-left: 300px;
-    padding-top:100px;
-    padding-bottom: 500px;
-
+    display: flex;
+    justify-content: center;
 }
+
 .ingreso, .registro{
     background-color: white;
     border-radius: 15px;
@@ -16,8 +15,7 @@ h1 {
     border: 3px solid #5878ca;
     padding: 25px;
     float: left;
-    height: 350px;
-    margin: 20px;
+    height: 400px;
 }
 #popup{
     display:none; 
