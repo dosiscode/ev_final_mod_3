@@ -452,4 +452,9 @@ nav h1 {
 
 .border-icon:hover {
     opacity: 0.8;
+
+}
+
+.invisible{
+    visibility: hidden;
 }
