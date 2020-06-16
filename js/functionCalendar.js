@@ -31,27 +31,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
           { 
             //tutolo de la etiqueta
-            title: 'Prueba POO!!',
+            title: 'Leer nota',
             //de que dia es la etiqueta, puede tener un end, y asi alargarla los dias que queramos
-            start: '2020-06-01', 
+            start: '2020-06-15', 
             //color de fondo, tambien con color le cambiamos el color de letra
             backgroundColor: '#667EAF',
             //poner la url del archivo que muestre la nota completa
-            url: 'nota.html'
+            
 
           }
       ],
 
-      eventClick: function(event) {
-        condole.log(event.url);
-        if (event.url) {
-          $.fancybox({
-            "type": "iframe",
-            "href": "event.url"
-          })
-          return false;
-          
-        }
+      eventClick: function(event) {        
+        document.getElementById("notaread").click();
+         
       }
       
     });

@@ -1,8 +1,7 @@
 $(document).ready(function(){
     $("#btnAddNote").click(function () {
         if(isEmpty($("#txtTitulo").val())){
-            //alert("Debe ingresar un titulo");
-            $("<div>Debe ingresar un titulo</div>").dialog();
+            alert("Debe ingresar un titulo");
             $("#txtTitulo").focus();
         }else{
             if(isEmpty($("#txtFecha").val())){
