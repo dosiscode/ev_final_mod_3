@@ -1,8 +1,6 @@
-.acceso{
-    margin-left: 250px;
-    padding-top:100px;
-    padding-bottom: 500px;
-
+.mensaje{
+    display: flex;
+    justify-content: center;
 }
 .log-out{
     background-color: transparent;
@@ -11,7 +9,6 @@
     padding: 15px;
     float: left;
     height: 270px;
-    width: 1000px;
 }
 
 td{
@@ -111,6 +108,11 @@ nav h1 {
 
     .nav-link {
         margin: 5px 0;
+    }
+
+    .between {
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -218,6 +220,20 @@ nav h1 {
     }
 }
 
+@media only screen and (max-width: 899px) {
+    .col-md-12 {
+        width: 100%;
+    }
+
+    .between {
+        display: flex;
+        flex-direction: column;
+    }
+    #meta_2 {
+        margin-top: 15px;
+    }
+}
+
 /*Colores*/
 .bg-light {
     background-color: #EEEEEE;
@@ -263,6 +279,10 @@ nav h1 {
     margin-right: 15px;
 }
 
+.mt {
+    margin-top: 15px;
+}
+
 .float-right {
     float: right;
 }
@@ -299,9 +319,11 @@ nav h1 {
     font-size: 20px;
     font-weight: bold;
     padding: 2px 30px;
+    transition: all 300ms linear;
 }
 .nav-logo:hover {
     color: #64B0BD;
+    transition: all 300ms linear;
 }
 
 .footer {
@@ -319,4 +341,5 @@ nav h1 {
     text-align: right;
     font-family: 'Raleway', sans-serif;
 }
+
 

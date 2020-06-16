@@ -37,6 +37,7 @@ input[type=button]{
 input[type=button]:hover {
     background-color: #66B067;
 }
+
 input[type=text], input[type=date], textarea {
     width: 100%;
     padding: 12px;
