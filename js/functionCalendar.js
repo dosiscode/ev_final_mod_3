@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', function() {
           //aqui va la accion del click
           click: function() {
             //window.open("nota.html","ventana1","scrollbars=NO")
-            var url="nota.html";
-            window.open(url);
+            document.getElementById("iframe").click();
+            
             
           }
         }
